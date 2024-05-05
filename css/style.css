@@ -1,0 +1,325 @@
+body {
+    font-family: Axiforma, sans-serif;
+}
+.navbar-brand img,
+footer img {
+    max-width: 75px; /* Adjust the max-width as needed */
+    max-height: 75px; /* Adjust the max-height as needed */
+    height: auto;
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .navbar-brand {
+        position: relative; /* Reset the position for mobile devices */
+        left: auto; /* Reset the position for mobile devices */
+    }
+}
+
+/* Adjust alignment for navbar links */
+.navbar-nav {
+    margin-left: auto;
+}
+
+/* Apply background color to the nav element */
+nav.navbar {
+    background-color: #fff !important;
+    box-shadow: 0 4px 6px 0 rgba(12, 0, 46, 0.08);
+}
+
+/* Increase spacing between navbar links */
+.navbar-nav .nav-link {
+    margin-right: 15px;
+    margin-left: 15px;
+    color: #1c1c1c; /* Set color to #1c1c1c */
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    display: block;
+    height: 0.2em;
+    width: 0;
+    background: #fe9d6d;
+    transition: all 0.5s;
+}
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+.btn-primary,
+.btn-secondary {
+    background-color: #ab572d;
+    border: none;
+    color: white;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:after,
+.btn-secondary:after {
+    content: "";
+    background-color: #ffffff33;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.btn-primary:hover:after,
+.btn-secondary:hover::after {
+    animation: ripple_401 1s ease-out; /* Corrected animation name */
+    background: #000;
+    color: #fff;
+}
+
+@keyframes ripple_401 {
+    0% {
+        width: 5px;
+        height: 5px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+    }
+}
+.blur-bg-blocks {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.blur-bg {
+    z-index: 0;
+    border-radius: 50%;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    -webkit-filter: blur(100px);
+    filter: blur(100px);
+    opacity: 20%;
+}
+
+.blur-bg-a {
+    left: -4%;
+    top: -10%;
+    background: #ff008c9c;
+}
+
+.blur-bg-b {
+    background: #a097f9a0;
+    margin: 0 auto;
+    left: -20%;
+    top: 50%;
+}
+
+.blur-bg-c {
+    right: 0;
+    top: 30%;
+    background: #00ffb7b3;
+}
+.heroHeading {
+    font-size: 60px;
+    line-height: 1.2;
+    color: #0a0a0a;
+}
+.heroPara {
+    font-size: 24px;
+    color: #787878;
+}
+.shopNow {
+    display: inline-block;
+}
+
+.button2 {
+    display: inline-block;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #fff;
+    padding: 0.7em 1.7em;
+    cursor: pointer !important;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #ab572d;
+    border: 1px solid #ffc6a9;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.button2:active {
+    color: #fff;
+    cursor: pointer !important;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.button2:before {
+    content: "";
+    position: absolute;
+    cursor: pointer !important;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.button2:after {
+    content: "";
+    cursor: pointer !important;
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #009087;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+.button2:hover {
+    color: #ffffff;
+    border: 1px solid #009087;
+    cursor: pointer !important;
+}
+
+.button2:hover:before {
+    top: -35%;
+    cursor: pointer !important;
+    background-color: #009087;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button2:hover:after {
+    top: -45%;
+    background-color: #009087;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+    cursor: pointer !important;
+}
+/* Custom styling for tabs */
+
+.leftImage img {
+    border-radius: 30px;
+}
+
+.educationGirl {
+    background: #fbf7ed;
+}
+.rightContent {
+    margin-left: -150px;
+    margin-top: 75px;
+    border-radius: 30px;
+}
+/* Media query for small devices */
+@media screen and (max-width: 768px) {
+    .rightContent {
+        margin: 0; /* No margin on small devices */
+    }
+}
+.bestProduct,
+.valueHead,
+.perfumeName {
+    color: #ab572d;
+}
+.card {
+    margin-bottom: 20px; /* Add margin bottom to create gap between cards */
+    box-shadow: 0px 6px 12px 0px rgba(10, 43, 83, 0.1490196078);
+    border: none;
+    border-radius: 25px 0;
+    transition: all 500ms;
+}
+
+.card img {
+    transition: all 500ms;
+}
+.card img:hover {
+    transform: scale(1.15);
+}
+
+.card-content {
+    padding: 20px; /* Add padding to the card content */
+}
+.rating {
+    color: orange;
+}
+.priceRating {
+    display: flex;
+    justify-content: space-between;
+}
+.buy-now-btn {
+    background-color: #893308;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.7s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.208);
+}
+
+.buy-now-btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #893308;
+}
+
+.services {
+    position: relative;
+    background: #e7f1ff;
+    padding: 30px;
+}
+.touch {
+    color: #ab572d;
+}
+.get,
+.bestProduct {
+    font-size: 40px;
+}
+.contactUs {
+    padding: 20px;
+    background: #f3f3f38d;
+}
+.contact-card {
+    margin-bottom: 20px; /* Add margin bottom to create gap between cards */
+    box-shadow: 0px 6px 12px 0px rgba(10, 43, 83, 0.1490196078);
+    border: none;
+    border-radius: 20px;
+    background: #fff;
+    transition: all 500ms;
+    padding: 15px;
+}
+.maps-start {
+    border-radius: 20px;
+    height: 475px;
+}
+ul li {
+    list-style: none;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: #222;
+}
